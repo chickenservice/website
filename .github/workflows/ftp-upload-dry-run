@@ -1,4 +1,4 @@
-name: Publish Website
+name: Publish Website Dry Run
 
 on:
   push:
