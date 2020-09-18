@@ -1,8 +1,8 @@
-name: Publish Website
+name: Publish Website Dry Run
 
 on:
   push:
-    branches: [ master ]
+    branches: [ develop ]
   workflow_dispatch:
     inputs:
       branch:
@@ -36,4 +36,4 @@ jobs:
         ftp-server: ftp://www48.world4you.com/
         ftp-username: ftp3725957_github
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-      working-directory: ./alessioeberl/public
+        git-ftp-args: --dry-run
