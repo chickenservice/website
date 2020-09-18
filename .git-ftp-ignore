@@ -4,6 +4,7 @@ alessioeberl/data/*
 alessioeberl/layouts/*
 alessioeberl/static/*
 alessioeberl/themes/*
+alessioeberl/config.toml
 
 .gitignore
 .gitattributes
