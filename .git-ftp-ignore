@@ -1,1 +1,14 @@
-alessioeberl/*
+alessioeberl/archetypes
+alessioeberl/content
+alessioeberl/data
+alessioeberl/layouts
+alessioeberl/static
+alessioeberl/themes
+
+.gitignore
+.gitattributes
+.git-ftp-ignore
+.git-ftp-include
+.github/*
+
+README.md
