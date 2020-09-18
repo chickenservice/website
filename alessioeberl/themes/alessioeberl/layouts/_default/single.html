@@ -1,0 +1,26 @@
+{{ define "main" }}
+<main>
+    <div class="uk-section uk-section-primary">
+        <article class="uk-container">
+            <header>
+                <h1>{{.Title}}</h1>
+            </header>
+            {{.Content}}
+        </article>
+    </div>
+    <div class="uk-container uk-container-xlarge uk-margin-large-top" uk-lightbox>
+        <div id="content">
+            {{ with .Resources.Match "images/*"}}
+            {{ range . }}
+            <div class="uk-float-left" style="margin: 5px">
+                <a href="{{ .Permalink }}" data-caption="f/{{ .Exif.Tags.FNumber }} - {{ .Exif.Tags.FocalLength }} mm"><img class="teaser" src="{{ .Permalink }}"></a>
+            </div>
+            {{ end }}
+            {{ end }}
+            <div class="uk-float-left" style="margin: 5px">
+                <a href="{{ .Params.youtube }}" data-attrs="width: 1280; height: 720;"><iframe class="teaser" src="{{ .Params.youtube }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+            </div>
+        </div>
+    </div>
+</main>
+{{ end }}

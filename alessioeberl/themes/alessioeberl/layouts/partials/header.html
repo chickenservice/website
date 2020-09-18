@@ -1,0 +1,12 @@
+<nav class="uk-navbar-container uk-container uk-container-xlarge" uk-navbar>
+    <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            <li class="{{if $currentPage.IsMenuCurrent "main" . }}uk-active{{end}}">
+                <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</nav>

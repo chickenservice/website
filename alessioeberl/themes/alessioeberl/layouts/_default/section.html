@@ -1,0 +1,35 @@
+{{ define "main" }}
+<div class="uk-container uk-container-xlarge">
+<div id="content" class="uk-margin-large-top uk-padding-bottom " uk-filter="target: .filter">
+    <ul class="uk-subnav uk-subnav-pill uk-flex-center uk-margin-large-bottom">
+        <li class="uk-active" uk-filter-control><a href="#">All</a></li>
+        {{ range $key, $value := .Site.Taxonomies.categories }}
+        <li uk-filter-control=".{{ $key }}"><a href="#">{{ $key }}</a></li>
+        {{ end }}
+    </ul>
+    <div class="filter ">
+        {{ range .Paginator.Pages }}
+        <div class="{{ range $key, $value := .Params.categories }}{{ $value }} {{end}} uk-float-left uk-card uk-card-small uk-card-default uk-text-center uk-animation-fade"
+            style="margin: 5px">
+            <div class="teaser uk-card-media-top">
+                <a href="{{.Permalink}}">
+                    <img src="{{ .Params.teaser }}" alt="teaser">
+                </a>
+            </div>
+            <div class="uk-card-body ">
+                <h4 class="uk-card-title uk-text-bold">{{.Title}}</h4>
+            </div>
+            <div class="uk-card-footer">
+                {{ range $key, $value := .Params.categories }}
+                <div class="uk-label">
+                    {{ $value }}
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+</div>
+{{ end }}

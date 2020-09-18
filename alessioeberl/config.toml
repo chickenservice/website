@@ -1,0 +1,5 @@
+baseURL = "https://www.alessioeberl.at"
+languageCode = "en-us"
+title = "Alessio Eberl"
+theme = "alessioeberl"
+SectionPagesMenu = "main"

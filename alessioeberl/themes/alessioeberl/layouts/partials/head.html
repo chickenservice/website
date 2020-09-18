@@ -1,0 +1,23 @@
+<head>
+    <title>Alessio Eberl</title>
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit-icons.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script src="{{ "js/fluid-grid.js" | absLangURL }}"></script>
+    <script>
+        let config = {"elementId": "content", "childSelector": ".teaser", "maxHeight": 320, "gutter": 5};
+        let grid = new FluidGrid(config);
+
+        window.addEventListener("load", () => grid.update(), false);
+        window.addEventListener("resize", () => grid.update(), false);
+        UIkit.util.on("#content", "afterFilter", () => { grid.update();});
+    </script>
+</head>
