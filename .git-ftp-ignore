@@ -1,9 +1,9 @@
-alessioeberl/archetypes
-alessioeberl/content
-alessioeberl/data
-alessioeberl/layouts
-alessioeberl/static
-alessioeberl/themes
+alessioeberl/archetypes/*
+alessioeberl/content/*
+alessioeberl/data/*
+alessioeberl/layouts/*
+alessioeberl/static/*
+alessioeberl/themes/*
 
 .gitignore
 .gitattributes
