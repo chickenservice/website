@@ -19,4 +19,4 @@ jobs:
         ftp-server: ftp://www48.world4you.com/
         ftp-username: ftp3725957_github
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        git-ftp-args: --dry-run --insecure
+        git-ftp-args: --dry-run
