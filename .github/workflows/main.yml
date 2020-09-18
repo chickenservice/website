@@ -3,6 +3,13 @@ name: Publish Website
 on:
   push:
     branches: [ master ]
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch'     
+        required: true
+        default: 'develop'
+    branches: [ "${{ github.event.inputs.branch }}" ]
 
 jobs:
   FTP-Deploy-Action:
