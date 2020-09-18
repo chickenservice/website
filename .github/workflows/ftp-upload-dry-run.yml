@@ -3,6 +3,13 @@ name: Publish Website Dry Run
 on:
   push:
     branches: [ develop ]
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch'     
+        required: true
+        default: 'develop'
+    branches: [ "${{ github.event.inputs.branch }}" ]
 
 jobs:
   FTP-Deploy-Action:
