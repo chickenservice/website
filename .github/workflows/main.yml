@@ -9,7 +9,8 @@ on:
         description: 'Branch'     
         required: true
         default: 'develop'
-    branches: [ "${{ github.event.inputs.branch }}" ]
+    branches: 
+      - ${{ github.event.inputs.branch }}
 
 jobs:
   FTP-Deploy-Action:
@@ -36,4 +37,5 @@ jobs:
         ftp-server: ftp://www48.world4you.com/
         ftp-username: ftp3725957_github
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-      working-directory: ./alessioeberl/public
+        local-dir: alessioeberl/public 
+
