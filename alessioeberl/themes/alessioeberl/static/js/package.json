@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@chickenservice/fluidgrid": "^0.1.1"
+  }
+}
