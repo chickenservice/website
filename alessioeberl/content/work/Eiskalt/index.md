@@ -2,8 +2,8 @@
 title: Eiskalt
 type: new
 layout: single
-teaser: /images/eiskalt.jpg
-youtube: https://youtu.be/J65Ok0SkhoU
+teaser: /images/eiskalt.png
+youtube: www.youtube.com/embed/J65Ok0SkhoU
 categories: 
     - music
 ---
